@@ -14,5 +14,5 @@ CREATE TABLE albums
   name VARCHAR(255),
   ideal_stock INT2,
   current_stock INT2,
-  artist_id INT8 references artists(id)
+  artist_id INT8 references artists(id) ON DELETE CASCADE 
   );
