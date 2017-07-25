@@ -17,13 +17,13 @@ artist4= Artist.new( {'name' => 'Metallica' } )
 artist4.save
 
 
-album1 = Album.new ( {'name' => 'Hyrbid Theory', 'ideal_stock' => '30', 'current_stock' => '20'} )
+album1 = Album.new ( {'name' => 'Hyrbid Theory', 'ideal_stock' => '30', 'current_stock' => '20', 'artist_id' => artist1.id} )
 album1.save
-album2 = Album.new ( {'name' => 'Meteora', 'ideal_stock' => '30', 'current_stock' => '15'} )
+album2 = Album.new ( {'name' => 'Meteora', 'ideal_stock' => '30', 'current_stock' => '15', 'artist_id' => artist1.id} )
 album2.save
-album3 = Album.new ( {'name' => 'Angels', 'ideal_stock' => '30', 'current_stock' => '22'} )
+album3 = Album.new ( {'name' => 'Angels', 'ideal_stock' => '30', 'current_stock' => '22','artist_id' => artist2.id} )
 album3.save
-album4 = Album.new ( {'name' => 'Deamons', 'ideal_stock' => '30', 'current_stock' => '16'} )
+album4 = Album.new ( {'name' => 'Deamons', 'ideal_stock' => '30', 'current_stock' => '16', 'artist_id' => artist3.id} )
 album4.save
 
 
