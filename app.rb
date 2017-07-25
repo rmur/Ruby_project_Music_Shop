@@ -2,6 +2,8 @@ require('sinatra')
 require('sinatra/contrib/all') if development?
 require_relative('./models/artists')
 require_relative('./models/albums')
+require_relative('./controllers/inventory')
+require_relative('./controllers/stock_management')
 
 #home page
 get '/' do
