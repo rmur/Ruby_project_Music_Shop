@@ -2,8 +2,8 @@ require('pg')
 require_relative('../db/sql_runner')
 
 class Album
-  attr_accessor :current_stock
-  attr_reader :name, :ideal_stock, :id
+  attr_accessor :name,:current_stock
+  attr_reader  :ideal_stock, :id
   def initialize(params)
 
     @name = params['name']
@@ -20,6 +20,12 @@ class Album
     result = SqlRunner.run(sql)
     @id = result[0]['id'].to_i
 
+  end
+
+  def self.all()
+    sql ="SELECT * FROM albums;"
+    result = SqlRunner.run(sql)
+    return result.map { | hash | Album.new(hash)}
   end
 
   def self.delete_all()
