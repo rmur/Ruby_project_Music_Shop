@@ -1,7 +1,14 @@
 require('sinatra')
 require('sinatra/contrib/all') if development?
-require_relative('../models/artists')
-require_relative('../models/albums')
+require_relative('../models/artist')
+require_relative('../models/album')
+
+#albums index
+get '/albums' do
+  @albums = Album.all
+  erb(:"albums/index")
+
+end
 
 #creating new album
 get '/albums/new' do

@@ -1,7 +1,7 @@
 require('sinatra')
 require('sinatra/contrib/all') if development?
-require_relative('../models/artists')
-require_relative('../models/albums')
+require_relative('../models/artist')
+require_relative('../models/album')
 
 #index
 get '/artists' do
@@ -11,8 +11,15 @@ end
 
 #new_artist
 get '/artists/new' do
-  erb(:'artists/new')
+  erb(
+    :'artists/new')
 end
+
+#shoe
+
+# get '/artists/:id' do
+#   @artist = Artist.find(params['id'])
+# end
 
 post '/artists/new' do
   @artist = Artist.new(params)
