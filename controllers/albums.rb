@@ -4,9 +4,9 @@ require_relative('../models/artists')
 require_relative('../models/albums')
 
 #creating new album
-get '/albums' do
+get '/albums/new' do
   @artist = Artist.all
-  erb( :"albums/new_album" )
+  erb( :"albums/new" )
 end
 #saves the album
 post '/albums' do
