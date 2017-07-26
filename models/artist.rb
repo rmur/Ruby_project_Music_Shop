@@ -30,9 +30,9 @@ class Artist
   end
   
   def self.find(id)
-    sql = "SELECT * FROM albums WHERE artist_id = #{id}"
+    sql = "SELECT * FROM artists WHERE id = #{id}"
     result = SqlRunner.run(sql)
-    return Album.new(result.first).name
+    return Artist.new(result.first)
 
   end
 

@@ -17,9 +17,10 @@ end
 
 #shoe
 
-# get '/artists/:id' do
-#   @artist = Artist.find(params['id'])
-# end
+get '/artists/:id' do
+  @artist = Artist.find(params['id'])
+  erb (:"artists/show")
+end
 
 post '/artists/new' do
   @artist = Artist.new(params)
