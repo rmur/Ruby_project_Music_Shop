@@ -17,6 +17,7 @@ get '/albums/new' do
 end
 #saves the album
 post '/albums' do
+  params
   @album = Album.new(params)
   @album.save
   redirect to '/albums'

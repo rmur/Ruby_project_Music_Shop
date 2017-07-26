@@ -8,5 +8,8 @@
   </li>
 <% end %>
 </ul>
+  <form action="/artists/<%=@artist.id%>/delete" method= "POST">
+    <input type="submit" value="Delete Artist">
+</form>
 
 
