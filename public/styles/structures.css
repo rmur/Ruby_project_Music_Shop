@@ -31,11 +31,7 @@ ul li {
 }
 
 
-
-.flex {
-  display: flex;
-}
-
-.flex--row {
-  flex-direction: row;
+.white{
+  color: white;
+  text-align: center;
 }

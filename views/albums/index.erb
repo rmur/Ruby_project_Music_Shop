@@ -4,18 +4,18 @@
 
 <ul>
 <% for album in @albums %>
-  <li>
+  <li style="border-bottom: 1px solid black;">
   <%album.id%><%=album.name%>
+  </li>
     <ul>
       <li>
         Stock - status: <%=album.stock_level%>
       </li>
-      <li>In stock: <%= album.current_stock %></li>
+      <li>In stock: <%= album.current_stock %> 
+          <a href="/albums/<%=album.id%>"><input type="submit" value="Update"></a>
+      </li>
       <li>Stock target: <%= album.ideal_stock %></li>
         <ul>
-          <div><li>
-            <a href="/albums/<%=album.id%>"><input type="submit" value="Update"></a>
-          </li><div>
           <div><li>
             <form action="/albums/<%=album.id%>/delete" method= "POST">
             <input type="submit" value="Delete Album">
