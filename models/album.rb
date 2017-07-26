@@ -40,6 +40,20 @@ class Album
     return SqlRunner.run(sql)
   end
 
+  def stock_level
+    if @current_stock >= @ideal_stock
+      return "Fully Stocked"
+    elsif @current_stock >= @ideal_stock * 0.7
+      return "High Stock Level"
+    elsif @current_stock >= @ideal_stock * 0.5
+          return "Medium stock Level"
+    elsif @current_stock > 0
+          return "Low Stock"
+    else return "Out of Stock"
+    end
+
+  end
+
   def self.find(id)
     sql = "SELECT * FROM albums WHERE id = #{id}"
     result = SqlRunner.run(sql)
