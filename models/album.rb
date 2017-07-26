@@ -29,6 +29,20 @@ class Album
     return result.map { |hash| Album.new(hash) }
   end
 
+  
+  def change_stock(new_number)
+    sql = "UPDATE albums SET (current_stock) = (#{new_number}) WHERE id =#{@id}"
+    return SqlRunner.run(sql)
+  end
+
+
+  def self.find(id)
+    sql = "SELECT * FROM albums WHERE id = #{id}"
+    result = SqlRunner.run(sql)
+    return Album.new(result.first)
+
+  end
+
   def self.all()
     sql ="SELECT * FROM albums;"
     result = SqlRunner.run(sql)

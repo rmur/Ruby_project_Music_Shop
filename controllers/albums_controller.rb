@@ -17,8 +17,20 @@ get '/albums/new' do
 end
 #saves the album
 post '/albums' do
-  params
+
   @album = Album.new(params)
   @album.save
   redirect to '/albums'
+end
+
+#update stock
+
+get '/albums/:id' do
+  erb( :"albums/update" )
+end
+
+post '/albums/:id/edit' do
+  @album = Album.find(params['id'])
+  @album.change_stock(params['new_number'])
+  redirect '/albums'
 end
