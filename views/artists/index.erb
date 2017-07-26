@@ -4,3 +4,14 @@
 <p>
   <a href="/artists/new">Create New Artist</a> 
 </p>
+
+<table>
+  <tr>
+    <th> Artists: </th>
+  </tr>
+  <% for artist in @artists %>
+  <tr>
+    <td><%= artist.name %></td>
+  </tr>
+  <% end %>
+</table>
