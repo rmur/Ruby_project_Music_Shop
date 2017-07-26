@@ -1,15 +1,10 @@
-<h1>Albums in stock :</h1>
+<h1>Albums</h1>
 
-<table>
-<tr>
-    <th>Name</th>
-    <th></th>
-    <th>Artist</th>
-</tr>
-<%for album in @albums %>
-  <tr>
-    <td> <%=album.name %></td>
-    <td>-</td>
-  </tr>
+<h3><a href="/albums/new">Create Album</a></h3>
+
+<ul>
+<% for album in @albums %>
+  <li><%=album.name %></li>
 <% end %>
-</table>
+</ul>
+

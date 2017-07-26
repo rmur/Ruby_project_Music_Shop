@@ -7,9 +7,9 @@
 <input type="number" id="stock_level" name="current_stock">
 
 <label for="artist">Artist:</label>
-<select name="artist" id="artist">
+<select name="artist_id" id="artist">
   <% @artist.each do |artist| %>
-    <option value= "<%= artist.id%>"><%=artist.name%>
+    <option value= "<%=artist.id%>"><%=artist.name%>
       
     </option>
   <% end %>
