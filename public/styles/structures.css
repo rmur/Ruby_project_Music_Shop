@@ -1,20 +1,18 @@
 body {
-  background: url('/images/music.jpeg');
+  background: url('https://static.pexels.com/photos/8263/pexels-photo.jpg');
   background-size: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  padding: 0px;
-  margin: 0px;
-}
 
-h1 {
- color: black;
-}
 
 a, a:visited {
+
   color: black;
   text-decoration: : none;
+}
+
+a:hover {
+  color: white;
 }
 
 nav {
@@ -22,19 +20,17 @@ nav {
   margin: 0px;
 }
 
-nav ul li {
 
-}
 
-ul {
+ul li {
+  font-family: verdana;
+  text-decoration: bols;
   padding: 0px;
-  margin: 0px;
+  margin-left: 10px;
   list-style-type: none;
 }
 
-main {
 
-}
 
 .flex {
   display: flex;

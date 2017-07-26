@@ -13,14 +13,14 @@
       <li>In stock: <%= album.current_stock %></li>
       <li>Stock target: <%= album.ideal_stock %></li>
         <ul>
-          <li>
-          <a href="/albums/<%=album.id%>"><input type="submit" value="Update"></a></p>
-          </li>
-          <li>
+          <div><li>
+            <a href="/albums/<%=album.id%>"><input type="submit" value="Update"></a>
+          </li><div>
+          <div><li>
             <form action="/albums/<%=album.id%>/delete" method= "POST">
             <input type="submit" value="Delete Album">
             </form>
-          </li>
+          </li><div>
         </ul>
     </ul>
   </li>
