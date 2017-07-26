@@ -15,7 +15,7 @@ get '/artists/new' do
     :'artists/new')
 end
 
-#shoe
+#show
 
 get '/artists/:id' do
   @artist = Artist.find(params['id'])
