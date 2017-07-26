@@ -11,13 +11,13 @@ get '/' do
 end
 
 #creating new album
-get '/stock_management/new_album' do
+get '/albums' do
   @artist = Artist.all
-  erb( :"stock_management/new_album" )
+  erb( :"albums/new_album" )
 end
 #saves the album
-post '/stock_management' do
+post '/Albums' do
   @album = Album.new(params)
   @album.save
-  redirect to '/stock_management'
+  redirect to '/albums'
 end
