@@ -1,10 +1,16 @@
 <h1>Albums</h1>
 
-<h3><a href="/albums/new">Create Album</a></h3>
+<h3><a href="/albums/new">Add a new album to the stock</a></h3>
 
 <ul>
 <% for album in @albums %>
-  <li><%=album.name %></li>
+  <li>
+    <%=album.name%>
+    <ul>
+      <li>In stock: <%= album.current_stock %></li>
+      <li>Stock target: <%= album.ideal_stock %></li>
+    </ul>
+  </li>
 <% end %>
 </ul>
 
