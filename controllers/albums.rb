@@ -9,7 +9,7 @@ get '/albums' do
   erb( :"albums/new_album" )
 end
 #saves the album
-post '/Albums' do
+post '/albums' do
   @album = Album.new(params)
   @album.save
   redirect to '/albums'
