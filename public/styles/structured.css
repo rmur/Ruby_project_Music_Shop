@@ -1,0 +1,37 @@
+body {
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+
+}
+
+
+a, a:visited {
+
+}
+
+nav {
+
+
+}
+
+nav ul li {
+
+
+}
+
+ul {
+
+
+}
+
+.flex{
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
