@@ -34,3 +34,11 @@ post '/albums/:id/edit' do
   @album.change_stock(params['new_number'])
   redirect '/albums'
 end
+
+#delete from the stock
+
+post '/albums/:id/delete' do
+  @album = Album.find(params['id'])
+  @album.delete
+  redirect '/albums'
+end

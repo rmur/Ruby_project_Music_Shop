@@ -9,7 +9,18 @@
     <ul>
       <li>In stock: <%= album.current_stock %></li>
       <li>Stock target: <%= album.ideal_stock %></li>
-      <p><a href="/albums/<%=album.id%>">Edit</a></p>
+        <ul>
+          <li>
+          <a href="/albums/<%=album.id%>"><input type="submit" value="Update"></a></p>
+          </li>
+          <li>
+       <form action="/albums/<%=album.id%>/delete" method= "POST">
+        <input type="submit" value="Delete Album">
+        </form>
+        </li>
+        </ul>
+
+
     </ul>
   </li>
 <% end %>
