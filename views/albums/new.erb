@@ -1,13 +1,13 @@
 <form method = "POST" action="/albums">
 
     <label for="new_album">Name of the Album:</label>
-    <input type="text" id ="new_album" name="name">
+    <input type="text" id ="new_album" name="name" required>
 
     <label for="stock_level">Qty to add in the stock:</label>
-    <input type="number" id="stock_level" name="current_stock">
+    <input type="number" id="stock_level" name="current_stock" required>
 
     <label for="target_stock_level">Ideal Stock:</label>
-    <input type="number" id="stock_level" name="ideal_stock">
+    <input type="number" id="stock_level" name="ideal_stock" required>
 
     <label for="artist">Artist:</label>
       <select name="artist_id" id="artist">
@@ -17,6 +17,6 @@
 
     </select>  
 
-    <input type="submit" value = "Add new album to stock">
+    <input type="submit" value = "Add new album to stock" >
 
 </form>
