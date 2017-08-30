@@ -12,6 +12,6 @@ Fully functional web-application with the ability to manage stock levels, adjust
 
 ### ⋅⋅* Functionality : 
 
-  ⋅⋅Adjust stock level;
-  ⋅⋅Ajust Prices;
-  ⋅⋅Add/delete stock components;
+  ⋅⋅* Adjust stock level ⋅⋅
+  ⋅⋅* Ajust Prices ⋅⋅
+  ⋅⋅* Add/delete stock components ⋅⋅
